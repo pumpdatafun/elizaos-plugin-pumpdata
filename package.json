@@ -1,5 +1,5 @@
 {
-  "name": "@pumpdatafun/plugin-pumpdata",
+  "name": "elizaos-plugin-pumpdata",
   "description": "pump.fun history for elizaOS agents from pumpdata.fun: launch, deployer, similar-launch and wallet records, paid per call in USDC over x402 on Solana, plus the free daily stats.",
   "version": "0.1.0",
   "type": "module",
@@ -64,7 +64,8 @@
     "test:live": "PUMPDATA_LIVE=1 bun test src/__tests__/live.test.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "lint": "prettier --check ./src && tsc --noEmit -p tsconfig.json",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "paid-call": "bun run scripts/paid-call.ts"
   },
   "publishConfig": {
     "access": "public"

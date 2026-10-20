@@ -1,4 +1,4 @@
-# @pumpdatafun/plugin-pumpdata
+# elizaos-plugin-pumpdata
 
 An elizaOS plugin for [pumpdata.fun](https://pumpdata.fun): pump.fun history for trading agents, read by the call.
 Every pump.fun trade, ever.
@@ -23,15 +23,15 @@ launches did, not a prediction.
 ## Install
 
 ```bash
-elizaos plugins add @pumpdatafun/plugin-pumpdata
+elizaos plugins add elizaos-plugin-pumpdata
 # or
-bun add @pumpdatafun/plugin-pumpdata
+bun add elizaos-plugin-pumpdata
 ```
 
 ```json
 {
   "name": "MyAgent",
-  "plugins": ["@pumpdatafun/plugin-pumpdata"],
+  "plugins": ["elizaos-plugin-pumpdata"],
   "settings": {
     "secrets": {
       "SOLANA_PRIVATE_KEY": "<the agent's wallet, base58>"
@@ -89,7 +89,7 @@ Each action reads its input from `options` when given, else from the message tex
 The client is exported for direct use:
 
 ```ts
-import { PumpdataClient, createX402Payer, signerFromSecret } from '@pumpdatafun/plugin-pumpdata';
+import { PumpdataClient, createX402Payer, signerFromSecret } from 'elizaos-plugin-pumpdata';
 
 const signer = await signerFromSecret(process.env.SOLANA_PRIVATE_KEY!);
 const client = new PumpdataClient({ payer: createX402Payer(signer, { maxPriceUsd: 0.01 }) });

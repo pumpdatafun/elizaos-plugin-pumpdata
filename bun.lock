@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@pumpdatafun/plugin-pumpdata",
+      "name": "elizaos-plugin-pumpdata",
       "dependencies": {
         "@elizaos/core": "1.7.2",
         "@solana/kit": "^5.5.1",
