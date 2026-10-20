@@ -7,7 +7,7 @@
  * The wallet: SOLANA_KEYPAIR_PATH (a Solana keypair file, the JSON array solana-keygen writes; read here, never printed),
  * or SOLANA_PRIVATE_KEY (base58 or base64).
  *
- * The cap is $0.005: an offer above it is refused before anything is signed. Use a wallet with a little USDC and SOL.
+ * The cap is $0.005: an offer above it is refused before anything is signed. Use a wallet with a little USDC; it needs no SOL (the facilitator pays the network fee).
  */
 import { PumpdataClient } from '../src/client';
 import { createX402Payer, signerFromSecret } from '../src/x402';
@@ -47,7 +47,7 @@ async function main(): Promise<void> {
   }
   if (!secret)
     throw new Error(
-      'PUMPDATA_PAY=1 needs SOLANA_KEYPAIR_PATH or SOLANA_PRIVATE_KEY (a wallet with a little USDC and SOL)'
+      'PUMPDATA_PAY=1 needs SOLANA_KEYPAIR_PATH or SOLANA_PRIVATE_KEY (a wallet with a little USDC)'
     );
   const signer = await signerFromSecret(secret);
   const client = new PumpdataClient({
