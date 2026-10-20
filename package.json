@@ -21,11 +21,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pumpdatafun/plugin-pumpdata.git"
+    "url": "git+https://github.com/pumpdatafun/elizaos-plugin-pumpdata.git"
   },
   "homepage": "https://pumpdata.fun",
   "bugs": {
-    "url": "https://github.com/pumpdatafun/plugin-pumpdata/issues"
+    "url": "https://github.com/pumpdatafun/elizaos-plugin-pumpdata/issues"
   },
   "exports": {
     "./package.json": "./package.json",
