@@ -1,0 +1,40 @@
+{
+  "day": "2026-10-19",
+  "from": "2026-10-19T00:00:00Z",
+  "to": "2026-10-20T00:00:00Z",
+  "totals": {
+    "launched": 51283,
+    "graduated": 1022,
+    "graduation_rate": 0.0199,
+    "volume_sol": 6785579.68,
+    "volume_curve_sol": 1609809.93,
+    "volume_pool_sol": 5175769.75,
+    "volume_usd": 710965881,
+    "volume_curve_usd": 168537364,
+    "volume_pool_usd": 542428517,
+    "trades": 12732992,
+    "trades_curve": 4685677,
+    "trades_pool": 8047315,
+    "traders": 554032,
+    "deployers": 12737,
+    "failed_transactions": 19457479,
+    "failed_fees_sol": 357.584,
+    "failed_signers": 142034,
+    "failed_share": 0.6044
+  },
+  "checks": {
+    "ok": true,
+    "failed": [],
+    "warned": []
+  },
+  "summary": "On Mon, Oct 19, 2026 (UTC), 51,283 coins launched on pump.fun and 1,022 graduated (1.99%); 6,785,580 SOL ($711.0M) traded. The biggest coin by peak market cap: $CATE at $72.2M. The most traded: $startupSI, 94,423 SOL. The deployer whose coins traded most: CS5s15y2wMGiSyqfTbEVKPkspVu8S7Eg6icJSCF26t4g, 1 coin and 94,423 SOL. 91% of launches had no trade at all in their second hour. Launches up 14% on the 7-day average. (Incomplete: the recorder caught 98.1% of the day's blocks.)",
+  "headline": "51,283 launched \u00b7 1,022 graduated (2.0%) \u00b7 6,785,580 SOL traded \u00b7 91% dead by hour two",
+  "links": {
+    "page": "https://pumpdata.fun/stats/2026-10-19",
+    "json": "https://pumpdata.fun/stats/2026-10-19.json",
+    "days": "https://pumpdata.fun/stats/days.json",
+    "record": "https://pumpdata.fun/record?day=2026-10-19",
+    "docs": "https://pumpdata.fun/llms.txt"
+  },
+  "schema_version": 2
+}

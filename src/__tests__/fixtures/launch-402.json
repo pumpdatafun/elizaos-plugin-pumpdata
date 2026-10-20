@@ -1,0 +1,22 @@
+{
+  "x402Version": 2,
+  "error": "PAYMENT-SIGNATURE header is required",
+  "resource": {
+    "url": "https://pumpdata.fun/launch/D27Lb9LA6D4dFpogGoXMXvZYkRsZ7UuctxAFpFQ3pump",
+    "mimeType": "application/json"
+  },
+  "accepts": [
+    {
+      "scheme": "exact",
+      "network": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+      "amount": "5000",
+      "asset": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "payTo": "BrYj2PMe2YLpEYnUkUDm5B5age2zTp3chWJr2hoAmG5S",
+      "maxTimeoutSeconds": 120,
+      "extra": {
+        "name": "USDC",
+        "feePayer": "Hc3sdEAsCGQcpgfivywog9uwtk8gUBUZgsxdME1EJy88"
+      }
+    }
+  ]
+}

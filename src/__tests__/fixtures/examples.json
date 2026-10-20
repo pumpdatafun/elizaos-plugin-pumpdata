@@ -1,0 +1,209 @@
+{
+  "launch": {
+    "mint": "D27Lb9LA6D4dFpogGoXMXvZYkRsZ7UuctxAFpFQ3pump",
+    "created": "2026-10-17T04:56:00Z",
+    "age_s": 540,
+    "deployer": {
+      "launches": 14,
+      "graduations": 1,
+      "best_peak": 12.4
+    },
+    "bundle_at_creation": {
+      "buyers_first_10s": 6,
+      "supply_share": 0.21
+    },
+    "insider_supply_share": 0.18,
+    "curve_progress": 0.42,
+    "migrated_at": null,
+    "market_cap_usd_at_age": null,
+    "matches": {
+      "n": 3120,
+      "graduated_share": 0.03,
+      "peak_day1": {
+        "p50": 1.1
+      },
+      "close_day1": {
+        "p50": 0.4
+      }
+    },
+    "summary": "This launch was created 9 min ago by a deployer with 14 launches and 1 graduation on record; 6 buyers in the first 10 s took 21% of supply; insiders' share of supply on record: 18%; curve progress on record: 42%; 3120 launches matched it: 3% of them graduated, their median peak over the next 24 h was 1.1x the market cap at that age, their median close 24 h on was 0.4x; for comparison, 2059 coins first traded inside the 15k-28k band from 2026-10-16T00:00:00Z to 2026-10-17T00:00:00Z (venue any) and 34.3% reached 2x, 11.2% reached 5x, 5.1% reached 10x, 2% reached 20x within 3 h.",
+    "compare_to": {
+      "band": "15k-28k",
+      "venue": "any",
+      "from": "2026-10-16T00:00:00Z",
+      "to": "2026-10-17T00:00:00Z",
+      "crossed": 2059,
+      "reached": {
+        "2x": 0.343,
+        "5x": 0.112,
+        "10x": 0.051,
+        "20x": 0.02
+      },
+      "median_peak": 1.464,
+      "source": "/public/baserate.json",
+      "basis": "headline band 15k-28k: the answer carries no USD market cap for this launch"
+    },
+    "next_steps": [
+      {
+        "call": "baserate",
+        "method": "GET",
+        "path": "/baserate?band=15k-28k&from=2026-10-16T00%3A00%3A00Z&to=2026-10-17T00%3A00%3A00Z&venue=any",
+        "price_usd": 0.005,
+        "why": "the base rate for the 15k-28k band over any window you choose; this path is compare_to's window"
+      },
+      {
+        "call": "replay",
+        "method": "POST",
+        "path": "/replay",
+        "price_usd": 2,
+        "why": "replay picks on this mint against the chain's history; the body is {picks: [{mint: \"D27Lb9LA6D4dFpogGoXMXvZYkRsZ7UuctxAFpFQ3pump\", at, size_sol}]}"
+      }
+    ],
+    "freshness": {
+      "data_as_of": "2026-10-17T00:00:00Z",
+      "lag_s": 18300
+    }
+  },
+  "wallets": {
+    "D27Lb9LA6D4dFpogGoXMXvZYkRsZ7UuctxAFpFQ3pump": {
+      "class": "winner",
+      "pnl_sol": 41.2,
+      "put_in": 120.5,
+      "took_out": 161.7,
+      "coins": 212,
+      "first_seen": "2025-04-02T11:08:00Z",
+      "summary": "Class winner; put in 120.5 SOL and took out 161.7 SOL (pnl 41.2 SOL) over 212 coins; first seen 2025-04-02T11:08:00Z.",
+      "compare_to": {
+        "band": "15k-28k",
+        "venue": "any",
+        "from": "2026-10-16T00:00:00Z",
+        "to": "2026-10-17T00:00:00Z",
+        "crossed": 2059,
+        "reached": {
+          "2x": 0.343,
+          "5x": 0.112,
+          "10x": 0.051,
+          "20x": 0.02
+        },
+        "median_peak": 1.464,
+        "source": "/public/baserate.json",
+        "basis": "headline band 15k-28k: a wallet record has no market cap"
+      },
+      "next_steps": [
+        {
+          "call": "baserate",
+          "method": "GET",
+          "path": "/baserate?band=15k-28k&from=2026-10-16T00%3A00%3A00Z&to=2026-10-17T00%3A00%3A00Z&venue=any",
+          "price_usd": 0.005,
+          "why": "the base rate for the 15k-28k band over any window you choose; this path is compare_to's window"
+        }
+      ],
+      "freshness": {
+        "data_as_of": "2026-10-17T00:00:00Z",
+        "lag_s": 18300
+      }
+    }
+  },
+  "deployer": {
+    "address": "7ufmve7ZSFCzuNcKRunYrGtyb2Ka1MXzkWwf7jZhVsmL",
+    "record": {
+      "launches": 437,
+      "graduations": 152,
+      "graduation_rate": 0.3478,
+      "best_peak_usd": 918883.97,
+      "last_launch_gap_s": 11418,
+      "launches_last_day": 7,
+      "last_launch": "2026-10-17T16:54:48Z",
+      "launches_after_build": 14
+    },
+    "last_90_days": {
+      "launches_measured": 195,
+      "doubled": 59,
+      "doubled_share": 0.3026,
+      "ten_x": 5,
+      "ten_x_share": 0.0256,
+      "held_2x": 3,
+      "held_2x_share": 0.0154,
+      "dead_next_day": 0,
+      "dead_share": 0,
+      "graduated_by_5m": 19
+    },
+    "recent_launches": [
+      {
+        "mint": "AT4eR1u97PVZkvbzeARS5eSYXcnKt9b6qXsvxPnzpump",
+        "created": "2026-10-14T16:40:48Z",
+        "market_cap_usd_at_5m": 3077.81,
+        "buyers_first_10s": 46,
+        "peak_mult_24h": 1,
+        "close_mult_24h": 0.9457,
+        "dead_next_day": false,
+        "graduated": false
+      }
+    ],
+    "next_launch": {
+      "buckets": {
+        "b_launches": "21+",
+        "b_grads": "1+"
+      },
+      "launches_like_it": {
+        "launches_measured": 786503,
+        "doubled": 18228,
+        "doubled_share": 0.0232,
+        "ten_x": 2095,
+        "ten_x_share": 0.0027,
+        "held_2x": 1767,
+        "held_2x_share": 0.0022,
+        "dead_next_day": 506566,
+        "dead_share": 0.6441,
+        "graduated_by_5m": 5897
+      }
+    }
+  },
+  "similar": {
+    "mint": "D27Lb9LA6D4dFpogGoXMXvZYkRsZ7UuctxAFpFQ3pump",
+    "at_age_s": 300,
+    "key": {
+      "age_s": 300,
+      "b_launches": "1",
+      "b_grads": "0",
+      "b_bundle": "4-10",
+      "b_insider": "<10%",
+      "b_curve": "migrated"
+    },
+    "yours": {
+      "deployer_launches": 1,
+      "deployer_graduations": 0,
+      "buyers_first_10s": 5,
+      "insider_share": 0.007834,
+      "curve_progress": 1,
+      "graduated": true
+    },
+    "same_bucket_n": 476,
+    "comparables": [
+      {
+        "mint": "EpcTN22u5u5qVM4DXzwWy67NCzp7WNwyS1hVf49Dpump",
+        "created": "2026-10-13T18:49:13Z",
+        "deployer": "48Wd6T22ykm6UHbdH4chq1hy1etdfpYYvVujCgL7AgPA",
+        "same_deployer": false,
+        "at_5m": {
+          "market_cap_usd": 73089.84,
+          "buyers_first_10s": 5,
+          "bundle_supply_share": 0.7931,
+          "insider_share": 0,
+          "curve_progress": 1,
+          "graduated": true,
+          "deployer_launches_before": 0,
+          "deployer_graduations_before": 0
+        },
+        "next_24h": {
+          "dead": false,
+          "peak_mult": 7.24,
+          "close_mult": 0.0285
+        },
+        "similar_because": "deployer with 1 launch (yours: 1), 0 graduated before (yours: 0); 5 buyers in the first 10 s (yours: 5); insiders 0% at 5 min (yours: 1%); graduated by 5 min",
+        "age_days": 5
+      }
+    ],
+    "summary": "1 comparable launch from the last 90 days: 0 dead within 24 h of minute 5, 0 closed at or above their 5-minute market cap, median peak 7.24x"
+  }
+}

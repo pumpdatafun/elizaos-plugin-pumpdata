@@ -1,0 +1,102 @@
+{
+  "name": "@pumpdatafun/plugin-pumpdata",
+  "description": "pump.fun history for elizaOS agents from pumpdata.fun: launch, deployer, similar-launch and wallet records, paid per call in USDC over x402 on Solana, plus the free daily stats.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "packageType": "plugin",
+  "platform": "node",
+  "license": "MIT",
+  "author": "pumpdatafun",
+  "keywords": [
+    "plugin",
+    "elizaos",
+    "elizaos-plugins",
+    "solana",
+    "pump.fun",
+    "x402",
+    "data"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pumpdatafun/plugin-pumpdata.git"
+  },
+  "homepage": "https://pumpdata.fun",
+  "bugs": {
+    "url": "https://github.com/pumpdatafun/plugin-pumpdata/issues"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "dependencies": {
+    "@elizaos/core": "1.7.2",
+    "@solana/kit": "^5.5.1",
+    "@x402/core": "~2.28.0",
+    "@x402/svm": "~2.28.0",
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.11",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "start": "elizaos start",
+    "dev": "elizaos dev",
+    "build": "bun run build.ts",
+    "build:watch": "bun run build.ts --watch",
+    "postinstall": "node -e \"const fs=require('fs');const path=require('path');const zodPath=path.join('node_modules','zod');if(fs.existsSync(zodPath)){fs.writeFileSync(path.join(zodPath,'v3.js'),'module.exports=require(\\\"./lib/index.js\\\");');fs.writeFileSync(path.join(zodPath,'v3.d.ts'),'export * from \\\"./lib/index\\\";');}\" || true",
+    "test": "bun test src/__tests__/*.test.ts",
+    "test:live": "PUMPDATA_LIVE=1 bun test src/__tests__/live.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "prettier --check ./src && tsc --noEmit -p tsconfig.json",
+    "format": "prettier --write ./src"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "resolutions": {
+    "zod": "4.3.5"
+  },
+  "agentConfig": {
+    "pluginType": "elizaos:plugin:1.0.0",
+    "pluginParameters": {
+      "SOLANA_PRIVATE_KEY": {
+        "type": "string",
+        "description": "The agent's Solana wallet secret key (base58), the same setting @elizaos/plugin-solana reads (WALLET_PRIVATE_KEY also works). Used only to sign x402 USDC payments for paid calls. Without it, only the free calls answer.",
+        "required": false,
+        "sensitive": true
+      },
+      "PUMPDATA_MAX_PRICE_USD": {
+        "type": "string",
+        "description": "The most the plugin will pay for one call, in USD. Default 0.01 (covers /launch, /deployer, /similar at $0.005 and /wallets at $0.01).",
+        "required": false
+      },
+      "PUMPDATA_API_KEY": {
+        "type": "string",
+        "description": "Optional free-tier key (pdk_..., 5 lookup calls an hour, from https://pumpdata.fun/keys), sent as x-api-key. Past the limit the call is paid over x402.",
+        "required": false,
+        "sensitive": true
+      },
+      "PUMPDATA_BASE_URL": {
+        "type": "string",
+        "description": "API base URL. Default https://pumpdata.fun.",
+        "required": false
+      }
+    }
+  }
+}
